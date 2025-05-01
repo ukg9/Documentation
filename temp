@@ -1,8 +1,15 @@
-1	Objective
-This plan outlines the performance monitoring framework for LexisNexis Fraud Intelligence (LNFI), used for evaluating fraud risk during onboarding. It defines the metrics, trends, and thresholds needed to assess the model’s effectiveness and stability based on score outcomes, risk tiers, operational actions, and fraud outcomes.	 
-2	Background
-LexisNexis Fraud Intelligence (LNFI) generates a fraud risk score, typically on a scale of 0 to 999, where a higher score indicates greater fraud risk. This score is used by banks to:
-•	Directly inform decisions (Approve / Refer / Decline),
-•	Classify applicants into internal risk tiers (e.g., Low / Medium / High),
-•	Support identity fraud detection and compliance with onboarding risk controls.
-LNFI plays a key role in filtering synthetic identities, manipulated identities, and repeating fraud attempts at the point of account opening. Given its criticality, a structured approach is needed to monitor the model’s accuracy, score distribution, fraud capture, and population stability.
+1. Objective
+This plan outlines the performance monitoring framework for LexisNexis InstantID, a rule-based identity verification system used during onboarding to validate the authenticity of applicant identity information. It defines the structure for monitoring key verification indices and associated risk indicators to assess the stability, data quality, and effectiveness of the model outputs. The monitoring will focus on the distribution of the CVI (Comprehensive Verification Index), NAS (Name-Address-SSN) Index, and NAP (Name-Address-Phone) Index, as well as any high-risk override conditions and verification failure trends.
+
+2. Background
+LexisNexis InstantID is an electronic identity verification solution that evaluates input identity elements—such as first name, last name, address, phone number, Social Security Number (SSN), date of birth (DOB), and driver license—against a comprehensive LexisNexis identity data repository. It returns three key indices:
+
+NAS Index (0–12): Indicates the match level of name, address, and SSN.
+
+NAP Index (0–12): Indicates the match level of name, address, and phone number.
+
+CVI (00–50): Summarizes NAS and NAP results into a single verification score, factoring in override rules based on high-risk conditions.
+
+InstantID helps financial institutions comply with Customer Identification Program (CIP) and Know Your Customer (KYC) regulations by automating identity verification. A CVI score of 40 or 50 is typically considered well-verified, while values of 10 or 20 may indicate contradictory identity data or high-risk indicators such as deceased SSNs, OFAC matches, or mismatched critical identity elements.
+
+Given the reliance on InstantID for verifying identities across a broad consumer base—including prime, underbanked, and unbanked applicants—it is essential to monitor score distributions, override logic triggers, and verification rates to ensure consistent and compliant onboarding decisions.
