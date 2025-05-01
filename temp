@@ -1,0 +1,8 @@
+1	Objective
+This plan outlines the performance monitoring framework for LexisNexis Fraud Intelligence (LNFI), used for evaluating fraud risk during onboarding. It defines the metrics, trends, and thresholds needed to assess the model’s effectiveness and stability based on score outcomes, risk tiers, operational actions, and fraud outcomes.	 
+2	Background
+LexisNexis Fraud Intelligence (LNFI) generates a fraud risk score, typically on a scale of 0 to 999, where a higher score indicates greater fraud risk. This score is used by banks to:
+•	Directly inform decisions (Approve / Refer / Decline),
+•	Classify applicants into internal risk tiers (e.g., Low / Medium / High),
+•	Support identity fraud detection and compliance with onboarding risk controls.
+LNFI plays a key role in filtering synthetic identities, manipulated identities, and repeating fraud attempts at the point of account opening. Given its criticality, a structured approach is needed to monitor the model’s accuracy, score distribution, fraud capture, and population stability.
