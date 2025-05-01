@@ -1,7 +1,8 @@
-| **Metric**                 | **Computation**                                                                                   | **Business Relevance**                                                                                                 |
-|---------------------------|---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| **Verification Pass Rate** | % of transactions with CVI score ≥ 40                                                           | Indicates the proportion of applicants whose identity is confidently verified; ensures minimal friction in onboarding. |
-| **Override Rate**         | % of transactions where CVI is forced to 10 or 20 due to high-risk conditions                    | Monitors frequency of risk triggers like deceased SSN, OFAC match, PO Box address, etc.; helps in refining input quality. |
-| **Fraud Capture Rate**     | (# of known fraud cases flagged with CVI ≤ 20) / Total known fraud cases                         | Measures the effectiveness of InstantID in identifying high-risk/fraudulent applicants.                                |
-| **False Decline Rate**     | (# of legitimate users with CVI ≤ 20) / Total verified legitimate users                          | Identifies cases where valid users are misclassified as high-risk, enabling review of rules to reduce customer friction. |
-| **PSI on Result Codes**    | Population Stability Index between current and baseline CVI/NAS/NAP distributions                | Assesses stability of identity verification results over time; detects shifts in applicant population or data quality. |
+Application ID (Hashed)
+Application Date
+Verification Score 
+Final Model Result
+Final Decision Code
+Segment (Customer Type)
+Channel Code
+Override Indicator
