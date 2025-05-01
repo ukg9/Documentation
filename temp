@@ -1,16 +1,7 @@
-Metric	Thresholds (RAG Status)	Escalation & Point of Contact
-Verification Pass Rate	Green: ≥ 90%
-Amber: 80–89%
-Red: < 80%	Red status triggers review with Risk Ops. Contact: Identity Risk Lead
-Override Rate	Green: ≤ 5%
-Amber: 6–10%
-Red: > 10%	Red: Review override drivers with LexisNexis support. Contact: Vendor Liaison
-Fraud Capture Rate	Green: ≥ 70%
-Amber: 50–69%
-Red: < 50%	Red: Escalate to Fraud Strategy Team. Contact: Fraud Analytics Manager
-False Decline Rate	Green: ≤ 2%
-Amber: 2.1–4%
-Red: > 4%	Red: Investigate with Customer Experience Team. Contact: CX & Risk Product Owner
-PSI on Result Codes	Green: < 0.1
-Amber: 0.1–0.25
-Red: > 0.25	Red: Review data drift with Model Monitoring. Contact: Data Science Lead
+The LexisNexis Fraud Intelligence (LNFI) model leverages two primary data sources during development and validation:
+
+JSON File: This file contains the output from the LexisNexis Fraud Intelligence API. It includes fraud risk scores, decision indicators, and metadata generated based on inputs such as name, address, SSN, and phone number. The JSON structure allows for the extraction of model outputs and associated explanations at a granular level, supporting downstream analysis and performance validation.
+
+CRM File: The CRM (Customer Relationship Management) file provides labeled data used for supervised validation. It includes historical transaction-level or account-level information such as customer identifiers, known fraud flags (0/1), timestamps, and related attributes. This file serves as the ground truth for assessing the predictive accuracy and operational effectiveness of the LNFI model.
+
+Together, these data sources enable comprehensive model evaluation, including fraud detection rate, false positives, override rates, and score distribution monitoring.
