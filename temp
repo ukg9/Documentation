@@ -1,4 +1,16 @@
-Monitoring is based on JSON payloads generated during onboarding, which contain InstantID verification results. These files are stored in a secure data repository and parsed to extract key fields such as ApplicationID, ApplicationDate, VerificationScore (CVI), FinalModelResult, FinalDecisionCode, Segment, ChannelCode, and OverrideIndicator.
-
-If available, external fraud outcome data is joined using ApplicationID to support fraud-related metrics. Basic data quality checks—such as completeness, duplication, and format validation—are applied during ingestion to ensure reliability for monitoring.
-
+Metric	Thresholds (RAG Status)	Escalation & Point of Contact
+Verification Pass Rate	Green: ≥ 90%
+Amber: 80–89%
+Red: < 80%	Red status triggers review with Risk Ops. Contact: Identity Risk Lead
+Override Rate	Green: ≤ 5%
+Amber: 6–10%
+Red: > 10%	Red: Review override drivers with LexisNexis support. Contact: Vendor Liaison
+Fraud Capture Rate	Green: ≥ 70%
+Amber: 50–69%
+Red: < 50%	Red: Escalate to Fraud Strategy Team. Contact: Fraud Analytics Manager
+False Decline Rate	Green: ≤ 2%
+Amber: 2.1–4%
+Red: > 4%	Red: Investigate with Customer Experience Team. Contact: CX & Risk Product Owner
+PSI on Result Codes	Green: < 0.1
+Amber: 0.1–0.25
+Red: > 0.25	Red: Review data drift with Model Monitoring. Contact: Data Science Lead
