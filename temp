@@ -1,8 +1,4 @@
-Application ID (Hashed)
-Application Date
-Verification Score 
-Final Model Result
-Final Decision Code
-Segment (Customer Type)
-Channel Code
-Override Indicator
+Monitoring is based on JSON payloads generated during onboarding, which contain InstantID verification results. These files are stored in a secure data repository and parsed to extract key fields such as ApplicationID, ApplicationDate, VerificationScore (CVI), FinalModelResult, FinalDecisionCode, Segment, ChannelCode, and OverrideIndicator.
+
+If available, external fraud outcome data is joined using ApplicationID to support fraud-related metrics. Basic data quality checks—such as completeness, duplication, and format validation—are applied during ingestion to ensure reliability for monitoring.
+
