@@ -1,7 +1,0 @@
-The LexisNexis Fraud Intelligence (LNFI) model leverages two primary data sources during development and validation:
-
-JSON File: This file contains the output from the LexisNexis Fraud Intelligence API. It includes fraud risk scores, decision indicators, and metadata generated based on inputs such as name, address, SSN, and phone number. The JSON structure allows for the extraction of model outputs and associated explanations at a granular level, supporting downstream analysis and performance validation.
-
-CRM File: The CRM (Customer Relationship Management) file provides labeled data used for supervised validation. It includes historical transaction-level or account-level information such as customer identifiers, known fraud flags (0/1), timestamps, and related attributes. This file serves as the ground truth for assessing the predictive accuracy and operational effectiveness of the LNFI model.
-
-Together, these data sources enable comprehensive model evaluation, including fraud detection rate, false positives, override rates, and score distribution monitoring.
